@@ -7,7 +7,10 @@ const getCharactersFromApi = () => {
                     photo: user.image,
                     name: user.name,
                     species: user.species,
-                    id: user.id
+                    id: user.id,
+                    episode: user.episode,
+                    origin: user.origin,
+                    status: user.status
                 }
             })
             return parsedCharacters;
