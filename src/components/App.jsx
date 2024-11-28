@@ -42,7 +42,13 @@ function App() {
                 <Route path="/" element={(
             <>
             <Filters onChangeName={handleFilterName} />
-            <CharacterList users={filteredCharacters} />
+            {filteredCharacters.length > 0 ? (
+                <CharacterList users={filteredCharacters} />
+            ) : (
+                <p className="no-result">
+                    No hay ningún personaje que coincida con la palabra "{filterName}"
+                </p>
+            )}
             </>
         )} />
             <Route path="/character/:idCharacter" element={<CharacterDetail user={user} />} />
