@@ -1,13 +1,15 @@
+
+
 function FilterByName({ onChangeName }) {
 
     const handleChange = (ev) => {
         onChangeName(ev.target.value);
     }
 return (
-    <>
-        <label htmlFor="name">Nombre</label>
-        <input type="text" id="name" onChange={handleChange} />
-    </>
+    <div className="input">
+        <label htmlFor="name" className="label">¿Qué personaje buscas?</label>
+        <input type="text" id="name" onChange={handleChange} className="user-input" placeholder="Escribe un nombre..."/>
+    </div>
     )
 }
 

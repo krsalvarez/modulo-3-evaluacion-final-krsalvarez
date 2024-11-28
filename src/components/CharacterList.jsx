@@ -1,5 +1,5 @@
-import CharacterCard from "./CharacterCard";
 
+import CharacterCard from "./CharacterCard";
 function CharacterList({ users }) {
 
     const usersElements = users.map((user) => {
@@ -8,7 +8,7 @@ function CharacterList({ users }) {
     return (
         <section>
             <h3>Lista de Personajes</h3>
-            <ul>
+            <ul className="section-list">
                 {usersElements}
             </ul>
         </section>
