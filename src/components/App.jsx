@@ -30,7 +30,7 @@ function App() {
     const routeData = matchPath("/character/:idCharacter", pathname);
     const urlId = routeData !== null ? routeData.params.idCharacter : null;
     const user = users.find((user) => {
-        return user.id === Number(urlId);
+        return user.id === Number(urlId); //no enseñaba nada porque no era un numero
     })
 
 
