@@ -1,7 +1,11 @@
-function Filters() {
+import FilterByName from "./FilterByName"
+
+function Filters({ onChangeName }) {
 
     return (
-        <h1>Hola mundo</h1>
+        <form>
+            <FilterByName onChangeName={onChangeName} />
+        </form>
     )
 }
 

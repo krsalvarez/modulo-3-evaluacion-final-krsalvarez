@@ -3,7 +3,7 @@ function Header() {
 
     return (
         <div className ="header">
-        <img src="../public/images/title.png"></img>
+        <img src="https://i.imgur.com/F8xlKY6.png"/>
         </div>
     )
 }

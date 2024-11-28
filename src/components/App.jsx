@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 function App() {
 
     const [users, setUsers] = useState([]);
+    const [filterName, setFilterName] = useState("");
 
     useEffect(() => {
         getCharactersFromApi().then((usersData) => {
@@ -16,11 +17,19 @@ function App() {
         });
     }, [])
 
+    const handleFilterName = (valueInput) => {
+        setFilterName(valueInput);
+    }
+    const filteredCharacters = users.filter((user) => {
+        return user.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+
     return (
         <>
             <Header />
         <main>
-            <CharacterList users={users}/>
+            <Filters onChangeName={handleFilterName} />
+            <CharacterList users={filteredCharacters} />
         </main>
         </>
     )
