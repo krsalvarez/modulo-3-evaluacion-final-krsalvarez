@@ -22,9 +22,14 @@ function App() {
     const handleFilterName = (valueInput) => {
         setFilterName(valueInput);
     }
-    const filteredCharacters = users.filter((user) => {
-        return user.name.toLowerCase().includes(filterName.toLowerCase());
-    })
+    const filteredCharacters = users
+    
+        .filter((user) => {
+            return user.name.toLowerCase().includes(filterName.toLowerCase());
+        })
+        .sort((a, b) => {
+            return a.name.localeCompare(b.name);
+        });
 
     const { pathname } = useLocation();
     const routeData = matchPath("/character/:idCharacter", pathname);
