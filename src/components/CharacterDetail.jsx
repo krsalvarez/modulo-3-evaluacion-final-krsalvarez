@@ -1,7 +1,8 @@
 
 function CharacterDetail({ user }) {
     if (!user) {
-        return <>Este personaje no existe</>
+        return <div className="no-person-div"><p className="no-person">Este personaje no existe</p>
+        <img src="https://i.imgur.com/UKa6hST.png" className="no-person-img"/></div>
     }
 
     return (

@@ -68,3 +68,21 @@
     color: white;
     text-decoration: none;
 }
+
+.no-person-div {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.no-person {
+    color: white;
+    font-size: 20px;
+}
+
+.no-person-img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
