@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function CharacterDetail({ user }) {
     if (!user) {
@@ -21,6 +22,7 @@ function CharacterDetail({ user }) {
             </p>
             </div>
             </div>
+            <Link to={"/"} className="link"><p className="back">← Atrás</p></Link>
         </section>
     )
 }
