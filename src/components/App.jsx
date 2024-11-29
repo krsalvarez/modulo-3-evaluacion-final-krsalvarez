@@ -13,6 +13,7 @@ function App() {
     const [users, setUsers] = useState([]);
     const [filterName, setFilterName] = useState("");
     const [filterSpecie, setFilterSpecie] = useState("");
+    const [filterStatus, setFilterStatus] = useState("");
 
     useEffect(() => {
         getCharactersFromApi().then((usersData) => {
@@ -26,14 +27,19 @@ function App() {
     const handleFilterSpecie = (value) => {
         setFilterSpecie(value);
     }
+    const handleFilterStatus = (valueStatus) => {
+        setFilterStatus(valueStatus);
+    }
 
     const filteredCharacters = users
-    
         .filter((user) => {
             return user.name.toLowerCase().includes(filterName.toLowerCase());
         })
         .filter((user) => {
             return filterSpecie === "" ? true : user.species === filterSpecie;
+        })
+        .filter((user) => {
+            return filterStatus === "" ? true : user.status === filterStatus;
         })
         .sort((a, b) => {
             return a.name.localeCompare(b.name); //localeCompare ordena cadenas y respeta idioma/mayus/minus
@@ -54,7 +60,7 @@ function App() {
             <Routes>
                 <Route path="/" element={(
             <>
-            <Filters onChangeName={handleFilterName} onChangeSpecie={handleFilterSpecie}/>
+            <Filters onChangeName={handleFilterName} onChangeSpecie={handleFilterSpecie} onChangeStatus={handleFilterStatus}/>
             {filteredCharacters.length > 0 ? (
                 <CharacterList users={filteredCharacters} />
             ) : (
