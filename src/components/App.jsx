@@ -45,6 +45,11 @@ function App() {
             return a.name.localeCompare(b.name); //localeCompare ordena cadenas y respeta idioma/mayus/minus
         });
 
+    const resetFilters = () => {
+        setFilterName("");
+        setFilterSpecie("");
+        setFilterStatus("");
+    }
     const { pathname } = useLocation();
     const routeData = matchPath("/character/:idCharacter", pathname);
     const urlId = routeData !== null ? routeData.params.idCharacter : null;
@@ -60,7 +65,7 @@ function App() {
             <Routes>
                 <Route path="/" element={(
             <>
-            <Filters onChangeName={handleFilterName} onChangeSpecie={handleFilterSpecie} onChangeStatus={handleFilterStatus}/>
+            <Filters onChangeName={handleFilterName} onChangeSpecie={handleFilterSpecie} onChangeStatus={handleFilterStatus} onResetFilters={resetFilters} currentSpecie={filterSpecie} currentStatus={filterStatus} currentName={filterName}/>
             {filteredCharacters.length > 0 ? (
                 <CharacterList users={filteredCharacters} />
             ) : (
