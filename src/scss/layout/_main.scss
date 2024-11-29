@@ -108,3 +108,16 @@
     text-decoration: none;
     margin-top: 15px;
   }
+
+  .filter-specie {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  .filter-radio {
+    margin-right: 25px;
+    margin-left: 5px;
+    accent-color: #4caf50; 
+    transform: scale(1.2); // Hace más grande el radio 
+}
