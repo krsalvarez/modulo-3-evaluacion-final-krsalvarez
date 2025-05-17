@@ -16,6 +16,7 @@ Este es un proyecto creado con **React + Vite** que permite buscar personajes de
   - 🟢 Vivo  
   - 💀 Muerto  
   - 🔴 Desconocido
+- **Número de episodios**: escribe el número de episodios y saldrán los personajes.
 
 🖼️ Muestra tarjetas con:
 - Imagen
