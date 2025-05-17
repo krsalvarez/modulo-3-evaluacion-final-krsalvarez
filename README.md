@@ -57,6 +57,3 @@ Para construir el proyecto y subirlo a GitHub Pages:
 npm run build
 npm run deploy
 ```
-
-
-¡Y a disfrutar!
