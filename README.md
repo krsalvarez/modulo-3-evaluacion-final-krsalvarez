@@ -34,26 +34,29 @@ Este es un proyecto creado con **React + Vite** que permite buscar personajes de
 
 1. Clona el repositorio:
 
-```bash
+```
 git clone https://github.com/krsalvarez/modulo-3-evaluacion-final-krsalvarez.git
-cd modulo-3-evaluacion-final-krsalvarez```
+cd modulo-3-evaluacion-final-krsalvarez
+```
 
 2. Instala dependencias:
-```bash
-npm install```
+
+`npm install`
 
 3. Ejecuta el proyecto en desarrollo:
-```bash
-npm run dev```
+
+`npm run dev`
 
 4. Abre http://localhost:5173 en tu navegador ¡y a disfrutar!
 
 ## 📆 Build y despliegue
 
 Para construir el proyecto y subirlo a GitHub Pages:
-```bash
+
+```
 npm run build
-npm run deploy```
+npm run deploy
+```
 
 
 ¡Y a disfrutar!
